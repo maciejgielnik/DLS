@@ -13,7 +13,12 @@ setwd(dir_in_dls_set)
 ## [5] for "LEA_01"
 ## [6] for "LEA_02"
 ## [7] for "LEA_05" 
-
+## [8] for "x_apoEDR_01" 
+## [9] for "x_apoEDR_02" 
+## [10] for "x_apoEDR_05" 
+## [11] for "x_apoLEA_01" 
+## [12] for "x_apoLEA_02"
+## [13] for "x_apoLEA_05"
   setwd(directories[1])
   
   while(i < 8){

@@ -1,6 +1,3 @@
-dir()
-work_dir <- getwd()
-
 cycle_name <- "cycle"
 cycle_number <- as.character("1")
 

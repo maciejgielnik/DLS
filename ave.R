@@ -2,20 +2,14 @@ library(ggplot2)
 library(readxl)
 library(cowplot)
 
+{
 i <- 1
-setwd(dir_in_dls_set)
-dir()
-setwd(directories[1])
-dir()
-
 intensity <- data.frame()
 
-data_for_plots
-sum(data_for_plots[10:28, 2])
-
+setwd(dir_in_dls_set)
+setwd(directories[1])
 
 while(i < 8){
-  
   
   setwd(cycle_matrix[i,1])
   
@@ -35,9 +29,7 @@ while(i < 8){
     
     k <- k+1
   }
-  
-  head(data_for_plots)
-  
+
   names(data_for_plots)[1] <- "x"
   names(data_for_plots)[c(2)] <- "y1"
   names(data_for_plots)[c(4)] <- "y2"
@@ -45,15 +37,28 @@ while(i < 8){
   names(data_for_plots)[c(3)] <- "ye1"
   names(data_for_plots)[c(5)] <- "ye2"
   names(data_for_plots)[c(7)] <- "ye3"
-  head(data_for_plots)
-  
 
-  
   setwd(dir_in_dls_set)
   setwd(directories[1])
   print(i)
   i <- i +1
+  }
+
+intensity
+names(intensity)[c(1)] <- "y1"
+names(intensity)[c(3)] <- "y2"
+names(intensity)[c(5)] <- "y3"
+names(intensity)[c(2)] <- "ye1"
+names(intensity)[c(4)] <- "ye2"
+names(intensity)[c(6)] <- "ye3"
 }
+
+
+
+intensity
+
+
+
 xdD <- intensity
 print(intensity)
 plot(intensity[,1])
